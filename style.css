@@ -1,0 +1,129 @@
+html {
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+/*  background: url(http://www.timvandevall.com/wp-content/uploads/2013/05/Lined-Paper-Template-21.jpg) bottom center;*/
+  background: url(https://i.pinimg.com/736x/42/46/0f/42460f7683cdfddb08afe6b8a4c49ad5--paper-background.jpg) bottom center;
+  background-size: cover;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .2rem solid #668B8B;
+  border-radius: 50%;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,139,139,.7 );
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sound {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+  background-color: #424242;
+  height: 500px;
+}
+
+h1 {
+    color: #ecf0f1;
+}
+
+h1 + p {
+  margin-bottom: 5%;
+    color: #3498db;
+}
+
+.scoreWrap {float: left;}
+.timeWrap {float: right;}
+
+.outerWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bg {
+  background-color: #04AF71;
+}
+
+button {
+   border: none;
+  background-color: #FF7373;
+  box-shadow: 0px 5px 0px 0px #CE4646;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.scoreWrap p, .scoreWrap span, .timeWrap p, .timeWrap span {
+    font-size: 30px;
+    color: #FF7373;
+}
+
+.wordsWrap {
+  margin-top: 50px;
+}
+
+.words span{
+    font-size: 60px;
+    letter-spacing: 1px;
+    color: #ECF0F1;
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--https://codepen.io/nikola1970/pen/oxXbmb
+http://theremin.music.uiowa.edu/MISpiano.html
+http://www.zamzar.com
+https://processing.org/examples/keyboardfunctions.html
+http://processingjs.org/learning/basic/keyboardfunctions/
+https://css-tricks.com/snippets/javascript/javascript-keycodes/
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Synesthesia Typing</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <div class="keys">
+    <div data-key="~" class="key">
+      <kbd>`</kbd>
+      <span class="sound">~</span>
+    </div>
+    <div data-key="1" class="key">
+      <kbd>1</kbd>
+      <span class="sound">!</span>
+    </div>
+    <div data-key="2" class="key">
+      <kbd>2</kbd>
+      <span class="sound">@</span>
+    </div>
+    <div data-key="3" class="key">
+      <kbd>3</kbd>
+      <span class="sound">#</span>
+    </div>
+    <div data-key="4" class="key">
+      <kbd>4</kbd>
+      <span class="sound">$</span>
+    </div>
+    <div data-key="5" class="key">
+      <kbd>5</kbd>
+      <span class="sound">%</span>
+    </div>
+    <div data-key="6" class="key">
+      <kbd>6</kbd>
+      <span class="sound">^</span>
+    </div>
+    <div data-key="7" class="key">
+      <kbd>7</kbd>
+      <span class="sound">&</span>
+    </div>
+    <div data-key="8" class="key">
+      <kbd>8</kbd>
+      <span class="sound">*</span>
+    </div>
+    <div data-key="9" class="key">
+      <kbd>9</kbd>
+      <span class="sound">(</span>
+    </div>
+    <div data-key="0" class="key">
+      <kbd>0</kbd>
+      <span class="sound">)</span>
+    </div>
+    <div data-key="-" class="key">
+      <kbd>-</kbd>
+      <span class="sound">_</span>
+    </div>
+    <div data-key="=" class="key">
+      <kbd>=</kbd>
+      <span class="sound">+</span>
+    </div>
+  </div>
+
+  <div class="keys">
+    <div data-key="q" class="key">
+      <kbd>q</kbd>
+      <span class="sound">q</span>
+    </div>
+    <div data-key="w" class="key">
+      <kbd>w</kbd>
+      <span class="sound">w</span>
+    </div>
+    <div data-key="e" class="key">
+      <kbd>e</kbd>
+      <span class="sound">e</span>
+    </div>
+    <div data-key="r" class="key">
+      <kbd>r</kbd>
+      <span class="sound">r</span>
+    </div>
+    <div data-key="t" class="key">
+      <kbd>t</kbd>
+      <span class="sound">t</span>
+    </div>
+    <div data-key="y" class="key">
+      <kbd>y</kbd>
+      <span class="sound">y</span>
+    </div>
+    <div data-key="u" class="key">
+      <kbd>u</kbd>
+      <span class="sound">u</span>
+    </div>
+    <div data-key="i" class="key">
+      <kbd>i</kbd>
+      <span class="sound">i</span>
+    </div>
+    <div data-key="o" class="key">
+      <kbd>o</kbd>
+      <span class="sound">o</span>
+    </div>
+    <div data-key="p" class="key">
+      <kbd>p</kbd>
+      <span class="sound">p</span>
+    </div>
+    <div data-key="[" class="key">
+      <kbd>[</kbd>
+      <span class="sound">[</span>
+    </div>
+    <div data-key="]" class="key">
+      <kbd>]</kbd>
+      <span class="sound">]</span>
+    </div>
+    <div data-key="\" class="key">
+      <kbd>\</kbd>
+      <span class="sound">|</span>
+    </div>
+  </div>
+
+  <div class="keys">
+    <div data-key="a" class="key">
+      <kbd>a</kbd>
+      <span class="sound">a</span>
+    </div>
+    <div data-key="s" class="key">
+      <kbd>s</kbd>
+      <span class="sound">s</span>
+    </div>
+    <div data-key="d" class="key">
+      <kbd>d</kbd>
+      <span class="sound">d</span>
+    </div>
+    <div data-key="f" class="key">
+      <kbd>f</kbd>
+      <span class="sound">f</span>
+    </div>
+    <div data-key="g" class="key">
+      <kbd>g</kbd>
+      <span class="sound">g</span>
+    </div>
+    <div data-key="h" class="key">
+      <kbd>h</kbd>
+      <span class="sound">h</span>
+    </div>
+    <div data-key="j" class="key">
+      <kbd>j</kbd>
+      <span class="sound">j</span>
+    </div>
+    <div data-key="k" class="key">
+      <kbd>k</kbd>
+      <span class="sound">k</span>
+    </div>
+    <div data-key="l" class="key">
+      <kbd>l</kbd>
+      <span class="sound">l</span>
+    </div>
+    <div data-key=";" class="key">
+      <kbd>;</kbd>
+      <span class="sound">;</span>
+    </div>
+    <div data-key="'" class="key">
+      <kbd>'</kbd>
+      <span class="sound">'</span>
+    </div>
+  </div>
+
+  <div class="keys">
+    <div data-key="z" class="key">
+      <kbd>z</kbd>
+      <span class="sound">z</span>
+    </div>
+    <div data-key="x" class="key">
+      <kbd>x</kbd>
+      <span class="sound">x</span>
+    </div>
+    <div data-key="c" class="key">
+      <kbd>c</kbd>
+      <span class="sound">c</span>
+    </div>
+    <div data-key="v" class="key">
+      <kbd>v</kbd>
+      <span class="sound">v</span>
+    </div>
+    <div data-key="b" class="key">
+      <kbd>b</kbd>
+      <span class="sound">b</span>
+    </div>
+    <div data-key="n" class="key">
+      <kbd>n</kbd>
+      <span class="sound">n</span>
+    </div>
+    <div data-key="m" class="key">
+      <kbd>m</kbd>
+      <span class="sound">m</span>
+    </div>
+    <div data-key="," class="key">
+      <kbd>,</kbd>
+      <span class="sound">,</span>
+    </div>
+    <div data-key="." class="key">
+      <kbd>.</kbd>
+      <span class="sound">.</span>
+    </div>
+    <div data-key="/" class="key">
+      <kbd>/</kbd>
+      <span class="sound">/</span>
+    </div>
+  </div>
+
+  <audio data-key="`" src="sounds/tick.ogg"></audio>
+  <audio data-key="1" src="sounds/1.ogg"></audio>
+  <audio data-key="2" src="sounds/2.ogg"></audio>
+  <audio data-key="3" src="sounds/3.ogg"></audio>
+  <audio data-key="4" src="sounds/4.ogg"></audio>
+  <audio data-key="5" src="sounds/5.ogg"></audio>
+  <audio data-key="6" src="sounds/6.ogg"></audio>
+  <audio data-key="7" src="sounds/7.ogg"></audio>
+  <audio data-key="8" src="sounds/8.ogg"></audio>
+  <audio data-key="9" src="sounds/9.ogg"></audio>
+  <audio data-key="0" src="sounds/0.ogg"></audio>
+  <audio data-key="-" src="sounds/dash.ogg"></audio>
+  <audio data-key="=" src="sounds/equal.ogg"></audio>
+
+  <audio data-key="q" src="sounds/q.ogg"></audio>
+  <audio data-key="w" src="sounds/w.ogg"></audio>
+  <audio data-key="e" src="sounds/e.ogg"></audio>
+  <audio data-key="r" src="sounds/r.ogg"></audio>
+  <audio data-key="t" src="sounds/t.ogg"></audio>
+  <audio data-key="y" src="sounds/y.ogg"></audio>
+  <audio data-key="u" src="sounds/u.ogg"></audio>
+  <audio data-key="i" src="sounds/i.ogg"></audio>
+  <audio data-key="o" src="sounds/o.ogg"></audio>
+  <audio data-key="p" src="sounds/p.ogg"></audio>
+  <audio data-key="[" src="sounds/leftsqbracket.ogg"></audio>
+  <audio data-key="]" src="sounds/rightsqbracket.ogg"></audio>
+
+  <audio data-key="a" src="sounds/a.ogg"></audio>
+  <audio data-key="s" src="sounds/s.ogg"></audio>
+  <audio data-key="d" src="sounds/d.ogg"></audio>
+  <audio data-key="f" src="sounds/f.ogg"></audio>
+  <audio data-key="g" src="sounds/g.ogg"></audio>
+  <audio data-key="h" src="sounds/h.ogg"></audio>
+  <audio data-key="j" src="sounds/j.ogg"></audio>
+  <audio data-key="k" src="sounds/k.ogg"></audio>
+  <audio data-key="l" src="sounds/l.ogg"></audio>
+  <audio data-key=";" src="sounds/semicolon.ogg"></audio>
+  <audio data-key="'" src="sounds/singlequote.ogg"></audio>
+
+  <audio data-key="z" src="sounds/z.ogg"></audio>
+  <audio data-key="x" src="sounds/x.ogg"></audio>
+  <audio data-key="c" src="sounds/c.ogg"></audio>
+  <audio data-key="v" src="sounds/v.ogg"></audio>
+  <audio data-key="b" src="sounds/b.ogg"></audio>
+  <audio data-key="n" src="sounds/n.ogg"></audio>
+  <audio data-key="m" src="sounds/m.ogg"></audio>
+  <audio data-key="," src="sounds/comma.ogg"></audio>
+  <audio data-key="." src="sounds/period.ogg"></audio>
+  <audio data-key="/" src="sounds/forwardslash.ogg"></audio>
+
+  <div class="wrapper">
+    <h1>Type as many words as you can until time runs out!</h1>
+    <button>START</button>
+    <div class="outerWrap">
+      <div class="scoreWrap">
+        <p>Score</p>
+        <span class="score">0</span>
+      </div>
+      <div class="timeWrap">
+        <p>Time left</p>
+        <span class="time">60</span>
+      </div>
+    </div>
+    <div class="wordsWrap">
+      <p class="words"></p>
+    </div>
+  </div>
+
+<script>
+  function removeTransition(event) {
+    if (event.propertyName !== 'transform') return;
+    event.target.classList.remove('playing');
+  }
+
+  function playSound(event) {
+    const audio = document.querySelector(`audio[data-key="${event.key}"]`);
+    const key = document.querySelector(`div[data-key="${event.key}"]`);
+    if (!audio) return;
+
+    key.classList.add('playing');
+    audio.currentTime = 1;
+    audio.play();
+  }
+
+  const keys = Array.from(document.querySelectorAll('.key'));
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound);
+
+</script>
+
+</body>
+</html>
